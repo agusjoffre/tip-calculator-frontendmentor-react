@@ -1,6 +1,4 @@
-import { Label,TextInput } from "keep-react";
-
-export function Bill({ setBill, calculate }) {
+export function Bill({ setBill, calculate, BILL }) {
   
   const handleChange = (e) => {
     const bill = parseFloat(e.target.value)
@@ -10,12 +8,13 @@ export function Bill({ setBill, calculate }) {
   
     return (
     <div>
-      <Label htmlFor="bill-input" value="Bill" />
-      <TextInput
-        id="bill-input"
-          color="gray"
-          onChange={handleChange}
-      />
+        <label htmlFor="bill-input">Bill</label>
+        <input
+          type="number"
+          id="bill-input"
+          value={BILL}
+          onChange={ handleChange }
+        />
     </div>
     )
 }

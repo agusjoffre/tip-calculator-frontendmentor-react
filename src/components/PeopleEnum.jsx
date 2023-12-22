@@ -1,13 +1,20 @@
-import { Label, TextInput } from "keep-react";
+export function PeopleEnum({ setPeople, calculate, people }) {
 
-export function PeopleEnum() {
+    const handleInput = (e) => {
+        const peopleInput = e.target.value
+        const peopleNumber = parseFloat(peopleInput)
+        setPeople(peopleNumber)
+        calculate()
+    }
+
     return (
         <div>
-            <Label htmlFor="people-input" value="Number of People" />
-      <TextInput
-        id="people-input"
-                color="gray"
-      />
+            <label htmlFor="people-input">Number of People</label>
+            <input type="number"
+                id="people-input"
+                value={ people }
+                onChange={ handleInput }
+            />
         </div>
     )
 }

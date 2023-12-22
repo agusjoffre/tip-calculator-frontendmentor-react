@@ -18,11 +18,11 @@ function App() {
   const [totalBill, setTotalBill] = useState(0)
 
   const handleTipCalc = () => {
-    const tipResult = tipCalculator(bill, tipPercentage, people)
-    setTipPerPerson(tipResult)
-    const totalResult = totalPerPersonCalculator(bill, tipPerPerson, people)
-    setTotalBill(totalResult)
-  }
+  const tipResult = tipCalculator(bill, tipPercentage, people)
+  setTipPerPerson(tipResult)
+  const totalResult = totalPerPersonCalculator(bill, tipResult, people)
+  setTotalBill(totalResult)
+}
 
   const handleReset = () => {
     setBill(0)
@@ -38,9 +38,9 @@ function App() {
       <h1>SPLI<br></br>TTER</h1>
       <div className="app">
         <div className="left">
-          <Bill setBill={setBill} calculate={handleTipCalc}/>
+          <Bill setBill={setBill} calculate={handleTipCalc} BILL={bill}/>
           <TipSelector setTipPercentage={setTipPercentage} calculate={handleTipCalc}/>
-          <PeopleEnum setPeople={setPeople} calculate={handleTipCalc}/>
+          <PeopleEnum setPeople={setPeople} calculate={handleTipCalc} people={people}/>
         </div>
         <div className="right">
           <div className="container-calculation">
