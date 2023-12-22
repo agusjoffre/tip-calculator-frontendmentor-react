@@ -6,7 +6,10 @@ export function TipAmount({tipPerPerson}) {
                 <p id="per-person">/ person</p>
             </div>
             <div className="right-amount">
-                <h1 className="big-number">${tipPerPerson}</h1>
+                { tipPerPerson < 1 ? (<h1 className="big-number">${ tipPerPerson }</h1>) : <h1 className="big-number">$0.00</h1>
+                }
+                
+                
             </div>
         </div>
     )
