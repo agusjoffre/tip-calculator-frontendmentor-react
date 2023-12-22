@@ -1,48 +1,26 @@
-import { Label } from "keep-react";
-
 export function TipSelector({setTipPercentage, calculate}) {
 
-    const handlePercentage = (id) => {
-        let number = Number(id)
-
-        if (id === "5") {
-            setTipPercentage(number)
-            calculate()
-            return 
-        } else if (id === "10") {
-            setTipPercentage(number)
-            calculate()
-            return 
-        } else if (id === "15") {
-            setTipPercentage(number)
-            calculate()
-            return
-        } else if (id === "25") {
-            setTipPercentage(number)
-            calculate()
-            return
-        } else if (id === "50") {
-            setTipPercentage(number)
-            calculate()
-            return
-        } else if (id === "custom") {
-            return
-        } else {
-            throw new Error()
+    const handlePercentage = (percentage) => {
+          
+        if (percentage === "custom") {
+            return;
         }
-    }
+
+        setTipPercentage(percentage);
+        calculate();
+    };
 
 
     return (
         <>
-            <Label value="Select Tip %" />
+            <label>Select Tip %</label>
         <div>
-            <button className="btn btn-tip-selector" id="5" onClick={handlePercentage}>5%</button>
-            <button className="btn btn-tip-selector" id="10" onClick={handlePercentage}>10%</button>
-            <button className="btn btn-tip-selector" id="15" onClick={handlePercentage}>15%</button>
-            <button className="btn btn-tip-selector" id="25" onClick={handlePercentage}>25%</button>
-            <button className="btn btn-tip-selector" id="50" onClick={handlePercentage}>50%</button>
-            <button className="btn btn-tip-selector" id="custom">Custom</button>
+            <button className="btn btn-tip-selector" onClick={()=>handlePercentage(5)}>5%</button>
+            <button className="btn btn-tip-selector"  onClick={()=>handlePercentage(10)}>10%</button>
+            <button className="btn btn-tip-selector"  onClick={()=>handlePercentage(15)}>15%</button>
+            <button className="btn btn-tip-selector" onClick={()=>handlePercentage(25)}>25%</button>
+            <button className="btn btn-tip-selector"  onClick={()=>handlePercentage(50)}>50%</button>
+            <button className="btn btn-tip-selector">Custom</button>
         </div>
     </>
     )

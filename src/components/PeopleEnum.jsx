@@ -1,8 +1,7 @@
 export function PeopleEnum({ setPeople, calculate, people }) {
 
     const handleInput = (e) => {
-        const peopleInput = e.target.value
-        const peopleNumber = parseFloat(peopleInput)
+        const peopleNumber = parseFloat(e.target.value)
         setPeople(peopleNumber)
         calculate()
     }

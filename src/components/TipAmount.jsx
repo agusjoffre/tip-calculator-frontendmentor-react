@@ -1,4 +1,4 @@
-export function TipAmount() {
+export function TipAmount({tipPerPerson}) {
     return (
         <div className="amount-container">
             <div className="left-amount">
@@ -6,7 +6,7 @@ export function TipAmount() {
                 <p id="per-person">/ person</p>
             </div>
             <div className="right-amount">
-                <h1 className="big-number">$</h1>
+                <h1 className="big-number">${tipPerPerson}</h1>
             </div>
         </div>
     )

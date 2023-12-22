@@ -1,4 +1,4 @@
-export function Total() {
+export function Total({totalBill}) {
         return (
         <div className="total-container">
             <div className="left-total">
@@ -6,7 +6,7 @@ export function Total() {
                 <p id="total-per-person">/ person</p>
             </div>
             <div className="right-total">
-                <h1 className="big-number">$</h1>
+                <h1 className="big-number">${totalBill}</h1>
             </div>
         </div>
     )
