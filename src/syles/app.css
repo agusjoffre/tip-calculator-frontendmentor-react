@@ -5,3 +5,68 @@ body {
     justify-content: center;
 }
 
+.container {
+    justify-content: center;
+    align-items: center;
+    padding: 150px;
+}
+
+.splitter {
+    padding-bottom: 70px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--neutral-dark);
+}
+
+.app {
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.container-calculation {
+    width: 400px;
+    height: 400px;
+    border-radius: 12px;
+    background-color: var(--neutral-very-dark);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    margin-right: 80px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+}
+
+.label{
+    color: var(--neutral-very-dark);
+    margin-bottom: 15px;
+}
+
+.input {
+    border-radius: 6px;
+    background-color: var(--very-light);
+    padding: 10px;
+    font-size: 24px;
+    text-align: end;
+}
+
+.btn {
+    border-radius: 6px;
+}
+
+.big-number{
+    font-weight: 900;
+    font-size: 60px;
+    color: var(--primary);
+}

@@ -8,9 +8,10 @@ export function PeopleEnum({ setPeople, calculate, people }) {
 
     return (
         <div>
-            <label htmlFor="people-input">Number of People</label>
+            <p className="label">Number of People</p>
             <input type="number"
                 id="people-input"
+                className="input"
                 value={ people }
                 onChange={ handleInput }
             />

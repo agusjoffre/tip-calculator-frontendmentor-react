@@ -1,4 +1,6 @@
-export function Total({totalBill}) {
+import "../syles/total.css"
+
+export function Total({ totalBill }) {
         return (
         <div className="total-container">
             <div className="left-total">

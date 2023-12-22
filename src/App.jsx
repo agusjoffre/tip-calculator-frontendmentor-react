@@ -36,8 +36,8 @@ function App() {
 
   return (
     <>
-      <div className="justify-center py-50">
-      <h1>SPLI<br></br>TTER</h1>
+      <div className="container">
+      <h1 className="splitter">SPLI<br></br>TTER</h1>
       <div className="app">
         <div className="left">
           <Bill setBill={setBill} calculate={handleTipCalc} BILL={bill}/>
@@ -47,9 +47,11 @@ function App() {
         <div className="right">
           <div className="container-calculation">
             <TipAmount tipPerPerson={tipPerPerson}/>
-            <Total totalBill={totalBill}/>
-          </div>
-          <Reset onReset={handleReset}/>
+              <Total totalBill={ totalBill } />
+              <Reset onReset={handleReset}/>
+            </div>
+                      
+
         </div>
         </div>
         </div>

@@ -1,0 +1,15 @@
+
+.btn-tip-selector {
+    padding: 10px;
+    background-color: var(--neutral-very-dark);
+    color: var(--very-light);
+    width: 80px;
+    height: 50px;
+}
+
+.tip-selector-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}

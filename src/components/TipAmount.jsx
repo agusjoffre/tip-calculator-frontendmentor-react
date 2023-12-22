@@ -1,4 +1,6 @@
-export function TipAmount({tipPerPerson}) {
+import "../syles/tip-amount.css"
+
+export function TipAmount({ tipPerPerson }) {
     return (
         <div className="amount-container">
             <div className="left-amount">

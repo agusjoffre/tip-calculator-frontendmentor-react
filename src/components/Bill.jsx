@@ -1,3 +1,5 @@
+import "../syles/bill.css"
+
 export function Bill({ setBill, calculate, BILL }) {
   
   const handleChange = (e) => {
@@ -7,11 +9,12 @@ export function Bill({ setBill, calculate, BILL }) {
   }
   
     return (
-    <div>
-        <label htmlFor="bill-input">Bill</label>
+    <div className="bill-container">
+        <p className="label">Bill</p>
         <input
           type="number"
           id="bill-input"
+          className="input"
           value={BILL}
           onChange={ handleChange }
         />

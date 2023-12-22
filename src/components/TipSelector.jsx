@@ -1,3 +1,5 @@
+import "../syles/tip-selector.css"
+
 import { useState } from "react";
 
 export function TipSelector({ setTipPercentage, calculate }) {
@@ -24,8 +26,8 @@ export function TipSelector({ setTipPercentage, calculate }) {
 
     return (
         <>
-            <label>Select Tip %</label>
-        <div>
+            <p className="label">Select Tip %</p>
+        <div className="tip-selector-container">
             <button className="btn btn-tip-selector" onClick={()=>handlePercentage(5)}>5%</button>
             <button className="btn btn-tip-selector"  onClick={()=>handlePercentage(10)}>10%</button>
             <button className="btn btn-tip-selector"  onClick={()=>handlePercentage(15)}>15%</button>
