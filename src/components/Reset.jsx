@@ -1,5 +1,5 @@
-export function Reset() {
+export function Reset({onReset}) {
     return (
-        <button className="btn btn-reset">RESET</button>
+        <button className="btn btn-reset" onClick={onReset}>RESET</button>
     )
 }

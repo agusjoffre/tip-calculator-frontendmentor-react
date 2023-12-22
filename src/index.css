@@ -1,4 +1,19 @@
-@import "keep-react/css";
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+    font-family: 'Space Mono', monospace;
+    --primary: hsl(172, 67%, 45%);
+    --neutral-very-dark: hsl(183, 100%, 15%);
+    --neutral-dark: hsl(186, 14%, 43%);
+    --grayish: hsl(184, 14%, 56%);
+    --light: hsl(185, 41%, 84%);
+    --very-light: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
+:root {
+    width: 1920px;
+}

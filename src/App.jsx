@@ -6,6 +6,7 @@ import {Total} from "./components/Total"
 import { Reset } from "./components/Reset"
 import {tipCalculator, totalPerPersonCalculator} from "./calculator"
 import { useState } from "react";
+import "./syles/app.css"
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <>
+      <div className="justify-center py-50">
       <h1>SPLI<br></br>TTER</h1>
       <div className="app">
         <div className="left">
@@ -49,7 +51,8 @@ function App() {
           </div>
           <Reset onReset={handleReset}/>
         </div>
-      </div>
+        </div>
+        </div>
     </>
   )
 }
