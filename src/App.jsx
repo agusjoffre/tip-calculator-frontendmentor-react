@@ -10,19 +10,19 @@ import "./syles/app.css"
 
 
 function App() {
-  const [bill, setBill] = useState(0)
+  const [bill, setBill] = useState(0.00)
   const [tipPercentage, setTipPercentage] = useState(0)
   const [people, setPeople] = useState(0)
 
 
-  const [tipPerPerson, setTipPerPerson] = useState(0)
-  const [totalBill, setTotalBill] = useState(0)
+  const [tipPerPerson, setTipPerPerson] = useState(0.00)
+  const [totalBill, setTotalBill] = useState(0.00)
 
   const handleTipCalc = () => {
   const tipResult = tipCalculator(bill, tipPercentage, people)
-  setTipPerPerson(tipResult)
+  setTipPerPerson(parseFloat(tipResult))
   const totalResult = totalPerPersonCalculator(bill, tipResult, people)
-  setTotalBill(totalResult)
+  setTotalBill(parseFloat(totalResult))
 }
 
   const handleReset = () => {

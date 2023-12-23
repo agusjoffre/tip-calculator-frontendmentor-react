@@ -1,6 +1,5 @@
 export function tipCalculator(bill, tipPercentage, people) {
-    const totalRaw = bill * (tipPercentage / 100);
-    const total = totalRaw.toFixed(2);
+    const total = bill * (tipPercentage / 100);
     const perPerson = total / people;
     return perPerson.toFixed(2)
 }
